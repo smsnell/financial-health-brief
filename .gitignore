@@ -1,0 +1,4 @@
+__pycache__/
+*.py[cod]
+deliverables/.brief.lock
+deliverables/.brief-*/

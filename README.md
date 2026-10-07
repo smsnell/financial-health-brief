@@ -1,4 +1,12 @@
-# Daily Financial Health Brief — starter
+# Daily Financial Health Brief
+
+The implemented [daily-financial-health-brief skill](daily-financial-health-brief/SKILL.md) freshly reads the three view-only Google Sheets and produces normalized CSVs plus a traceable draft for the Operations Owner. Python 3.10+ on Linux, macOS or WSL is the only runtime dependency.
+
+Open the skill's operator instructions for the complete end-to-end command. The current [deliverables/report.md](deliverables/report.md) uses an explicit provisional mode, following the user's instruction to proceed with available evidence. Ledger completeness remains unconfirmed: totals describe fetched records only and ledger materiality conclusions are withheld. This is a documented exception to interview-7's completeness prerequisite. Normal mode still requires Operations' matching completeness context. Negative-baseline percentages and materiality remain unresolved; signed differences are preserved. This workflow performs no source-system writes or financial actions.
+
+Run behavioral verification from the repository root with `python3 -B -m unittest discover -s daily-financial-health-brief/tests -v`.
+
+## Original assignment and submission instructions
 
 Build a reusable Skill that prepares a source-traceable financial brief for human review.
 
