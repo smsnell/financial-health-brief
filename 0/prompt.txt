@@ -1,0 +1,107 @@
+Create the following directories: deliverables/normalized and interviews
+
+---
+
+also create scripts and references
+
+---
+
+Can you copy interview-1 from the Desktop into the interviews folder here
+
+---
+
+Create a file called DESIGN.md with the following contents: ## Scenario
+
+Quillhaven Academy's Finance and Operations Manager needs a reliable daily financial brief. Preparing it from separate records takes time and can leave uncertainty hidden in a polished report.
+
+## Your task
+
+Build an Agent Skills-compliant skill named `daily-financial-health-brief` that another operator can run to produce the manager's requested brief from current business sources. Keep the work read-only and the brief a draft for human review; do not edit a source system or perform a financial action.
+
+## Deliverables
+
+**Interview records — `interviews/*.md`.** Include the original Work Sim Markdown export for every interview session, with its session metadata and complete participant-visible messages. Keep one final complete export per session without rewriting or summarizing it. Commit and push these files in the submitted code revision and ensure the facilitator can read them. Coding-session capture remains a separate requirement. If the export is unavailable, contact the facilitator; do not manufacture a replacement.
+
+Include these paths in your repository:
+
+- `daily-financial-health-brief/SKILL.md` with valid `name` and `description` frontmatter;
+- an executable implementation under `daily-financial-health-brief/scripts/`;
+- focused operating knowledge under `daily-financial-health-brief/references/`;
+- `deliverables/normalized/transactions.csv`;
+- `deliverables/normalized/budget.csv`;
+- `deliverables/normalized/revenue.csv`; and
+- `deliverables/report.md`: the manager's requested brief, with traceable findings, source metadata and unresolved items.
+
+Required CSV columns:
+
+- `transactions.csv`: `transaction_id`, `date`, `account`, `category`, `description`, `amount`, `currency`, `status`, `source`, `source_version`, `amount_status`;
+- `budget.csv`: `period`, `category`, `budget_amount`, `currency`, `owner`, `review_rule`, `source`, `source_version`; and
+- `revenue.csv`: `date`, `source`, `metric`, `value`, `currency`, `source_version`.
+
+Preserve every recognized source row. Extra source columns do not have to appear in normalized output unless they carry business meaning needed for traceability or review.
+
+Required `report.md` figures. Report each of these as an exact number carrying its own label and its sign, not as a rounded figure or as a description of the direction of travel: the reporting date's posted total, its pending-confirmed total and its disputed-confirmed total; the prior business day's posted total; and the change between those two posted totals. The interview establishes what each figure means, which rows it draws on and how it is derived.
+
+Document one programmatic end-to-end command, its runtime and dependencies. Use relative paths from the skill root, validate inputs before producing usable outputs, support deterministic reruns, and avoid manual per-row processing or hard-coded expected answers. Identify source roles from field meaning, not filenames or column positions.
+
+Accept the three interview-disclosed Google Sheets URLs as runtime inputs. Every run must freshly read all three through their view-only access. Bundled, manually downloaded or previously cached CSVs cannot be the primary input. Before publishing outputs, print each source URL or spreadsheet identity, sheet/tab identity, fetch timestamp, source version and fetched row count for the Entire transcript, and record the same metadata in `report.md`. If a source cannot be fetched or validated, fail safely without silently reusing an older copy. A failed run must also not leave an earlier run's deliverables at the required output paths where they can be read as current: remove, invalidate or unmistakably mark them as stale or failed, because not overwriting them is not enough. Request clarification for incomplete or ambiguous evidence; do not invent values.
+
+---
+
+Read the DESIGN.md file and the interview located in interviews. Extract the needed requirements, both business and technical, and make a checklist. Distinguish whether they came from the design spec or the interview. If there is any ambiguity or missing needed information inform me instead of guessing. Then propose a implementation plan for an Agents Skills-compliant daily-financial-health-brief skill. Do not modify anything yet.
+
+---
+
+similar to when we grabbed interview-1 can you copy interview-2 over to the interviews folder. Use it to see if it answers the questions you had, I think it covers most of the missing information. Ignore the Entire stuff that is handled separately. Let me know if that answers the ambiguities. If it does we can proceed with the source inspection.
+
+---
+
+Hmm I must have grabbed the wrong file, grab interview-3 instead. I checked it and it has the additional information.
+
+---
+
+Grab interview-5 it should answer all remaining questions, proceed with the source inspection.
+
+---
+
+I have already signed in and installed the plugin, is it because we are in the commandline version?
+
+---
+
+If you have everything you need lets create an implementation. Make it professional, and easy for another operater to use. Otherwise follow our implementation plan.
+
+---
+
+How big of a file is that scanner thing? Did you have the normalized csv files as well?
+
+---
+
+Whats that package used for?
+
+---
+
+You can download it and run the check you wanted to do with it
+
+---
+
+You can use pipx
+
+---
+
+Do an audit on your implemenation and results compared to the design specifications and the interview.
+
+---
+
+Bring over interview-6, it should answer the remaining questions. Delete the others. Then fix those invalidation errors you mentioned
+
+---
+
+Grab interview-7, it answers the questions. Make any changes off of that new information.
+
+---
+
+Ive asked about those questions a few times, not sure we will get better information. Will have to make do for now.
+
+---
+
+What do you mean by provisional mode
